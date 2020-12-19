@@ -1,0 +1,302 @@
+/*********************
+   Simple Reset
+*********************/
+html {
+    box-sizing: border-box;
+  
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  button {
+    border: none;
+    font-family: inherit;
+  }
+
+/*********************
+   Overall Styles
+*********************/
+
+/* Variables */
+html {
+  --orange: #EC6E4C;
+  --grey: #48484a;
+  --lt-grey: #F2F2f2;
+  --blue: #0072B9;
+  font-size: 62.5%;
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    font-size: 2rem;
+    line-height: 1.5;
+    background-color: #0072b9;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2348484a' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+/***************************
+  Search Form Styles
+***************************/
+
+.search-wrapper {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--lt-grey);
+    box-shadow: 0 0 3px 5px rgba(0,0,0,0.5);
+  }
+
+  .search-wrapper p {
+    padding-left: 2rem;
+  }
+
+  #search {
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form-input {
+    display: flex;
+    flex: 2;
+    margin-right: 5px;
+    justify-content: space-evenly;
+  }
+
+a.button, button, input[type="button"] {
+    color: white;
+    background: var(--orange);
+    padding: 1rem;
+    border: 0;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+    font-size:2rem;
+    width: 20%;
+  }
+
+input:not([type="checkbox"]):not([type="radio"]), textarea, select {
+    display: block;
+    padding: 1rem;
+    border: 1px solid var(--grey);
+    margin-right: 3px;
+    width: 80%;
+    font-size: 1.5rem; 
+  }
+ 
+button[disabled] {
+    opacity: 0.2;
+  }
+
+/***************************
+   Today's Weather Styles
+***************************/
+
+.weather-wrapper {
+    max-width: 1000px;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: var(--lt-grey);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 3px 5px rgba(0,0,0,0.5);
+  }
+  
+  .msg {
+    color: black;
+    text-align: center;
+    padding: 1rem;
+  }
+  .weather-today {
+    max-width: 500px;
+    margin: 1rem auto;
+    background-color: rgba(255, 255, 255,0.5);
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content:center;
+    align-items: center;
+    grid-gap: 10px;
+    padding-bottom: 1rem;
+    color: black;
+    box-shadow: 0 0 3px 5px rgba(0,0,0,0.08653);
+  }
+
+  .weather-today .city {
+      font-size: 4rem;
+      font-weight: bold;
+      text-align: center;
+  }
+  
+  .weather-today img{
+      background: none;
+      width: 25%;
+      margin: 0 auto;
+  }
+
+  .weather-today .temp{
+      font-size: 4rem;
+      font-weight: bold;
+      text-align: center;
+  }
+
+  .weather-today .description{
+      text-align:center;
+      font-weight: bold;
+  }
+
+  .today-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 100px; 
+      
+  }
+
+  .today-details .sun{
+    text-align: left;
+    justify-self: end;
+    font-weight: bold;
+  }
+
+  .today-details .hi-lo{
+    text-align: left;
+    justify-self: start;
+    font-weight: bold;
+}
+
+.today-details p {
+  font-weight: bold;
+}
+
+/***************************
+  5-Day Forecast Styles
+***************************/
+ 
+  .weather-forecast {
+    max-width: 1500px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .day > * {
+      text-align: center;
+  }
+
+  .day {
+    padding: 1rem;
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255,0.5);
+    box-shadow: 0 0 3px 5px rgba(0,0,0,0.08653);
+}
+
+.day img {
+    margin: 0 auto;
+}
+
+
+.day .lo{
+    font-size: small;
+    color: #48484a;
+}
+
+.day p {
+  font-weight: bold;
+}
+
+
+/***************************
+ Loader Styles
+***************************/
+.loader {
+  margin: 0 auto;
+}
+.sk-chase {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  animation: sk-chase 2.5s infinite linear both;
+}
+
+.sk-chase-dot {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0; 
+  animation: sk-chase-dot 2.0s infinite ease-in-out both; 
+}
+
+.sk-chase-dot:before {
+  content: '';
+  display: block;
+  width: 25%;
+  height: 25%;
+  background-color: var(--grey);/*#fff;*/
+  border-radius: 100%;
+  animation: sk-chase-dot-before 2.0s infinite ease-in-out both; 
+}
+
+.sk-chase-dot:nth-child(1) { animation-delay: -1.1s; }
+.sk-chase-dot:nth-child(2) { animation-delay: -1.0s; }
+.sk-chase-dot:nth-child(3) { animation-delay: -0.9s; }
+.sk-chase-dot:nth-child(4) { animation-delay: -0.8s; }
+.sk-chase-dot:nth-child(5) { animation-delay: -0.7s; }
+.sk-chase-dot:nth-child(6) { animation-delay: -0.6s; }
+.sk-chase-dot:nth-child(1):before { animation-delay: -1.1s; }
+.sk-chase-dot:nth-child(2):before { animation-delay: -1.0s; }
+.sk-chase-dot:nth-child(3):before { animation-delay: -0.9s; }
+.sk-chase-dot:nth-child(4):before { animation-delay: -0.8s; }
+.sk-chase-dot:nth-child(5):before { animation-delay: -0.7s; }
+.sk-chase-dot:nth-child(6):before { animation-delay: -0.6s; }
+
+@keyframes sk-chase {
+  100% { transform: rotate(360deg); } 
+}
+
+@keyframes sk-chase-dot {
+  80%, 100% { transform: rotate(360deg); } 
+}
+
+@keyframes sk-chase-dot-before {
+  50% {
+    transform: scale(0.4); 
+  } 100%, 0% {
+    transform: scale(1.0); 
+  } 
+}
+
+/***************************
+   Handles Hiding Divs
+***************************/
+
+.hidden {
+  display: none;
+}

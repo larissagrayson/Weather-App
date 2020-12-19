@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='styles.css'>
+</head>
+<body>
+    <div class=search-wrapper>
+        <p>Enter Location:</p>
+        <form id="search"autocomplete="off">
+            <div class="form-input">
+                <input aria-label="Enter City, State or City, Country" type="text" id="location" name="location" placeholder="City, State or City, Country">
+                <div class="radio-btns">
+                    <input type="radio" id="farenheit" name="temp" value="imperial" checked>
+                    <label for="farenheit">&deg;F</label>
+                    <input type="radio" id="celsius" name="temp" value="metric">
+                    <label for="celsius">&deg;C</label>
+                </div>
+            </div>
+            <button name="submit" type="submit">Get Forecast</button>
+        </form>
+        <div class="msg hidden"></div>
+        <div class="sk-chase loader hidden">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+        </div>
+        
+    </div>
+    <div class="weather-wrapper hidden">
+        <div class="weather-today"></div>
+        <div class="weather-forecast"></div>
+    </div>
+    
+    <script src="weather.js"></script>
+</body>
+</html>
