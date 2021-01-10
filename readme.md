@@ -12,6 +12,8 @@ The app will then update the browser to display the weather data at that locatio
 
 It is built using HTML, CSS and vanilla JavaScript.  The layout is achieved using both CSS Grid and Flexbox.
 
+A live demo of this app can be viewed [here](https://larissagrayson.github.io/Weather-App/).
+
 **SKILLS DEMONSTRATED:**
  * 3rd Party APIs 
  * Async/Await/Promises
@@ -23,5 +25,3 @@ It is built using HTML, CSS and vanilla JavaScript.  The layout is achieved usin
  * CSS Variables
  * Forms
  * Loaders
-
- The working version of this app can be found [here] (#)
